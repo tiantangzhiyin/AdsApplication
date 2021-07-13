@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AdsApplication</string>
+
+    <string name="hw_ad_banner_id">testw6vs28auh3</string>
+    <string name="hw_ad_reward_id">testx9dtjwj8hp</string>
+    <string name="hw_ad_interstitial_id">testb4znbuh3n2</string><!--视频-->
+    <string name="hw_ad_interstitial_id2">teste9ih9j0rc3</string><!--图片-->
+    <string name="hw_ad_splash_id">testq6zq98hecj</string>
+</resources>

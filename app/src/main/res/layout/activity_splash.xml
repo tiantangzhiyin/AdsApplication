@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <!--开屏广告logo区域，用于展示应用图标、应用名称和版权信息-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/splash_iv"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="60dp"
+            android:background="@mipmap/ic_launcher"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/splash_diver"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <View
+            android:id="@+id/splash_diver"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:alpha="0.1"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toTopOf="@id/splash_iv"
+            app:layout_constraintBottom_toBottomOf="@id/splash_iv"
+            app:layout_constraintStart_toEndOf="@id/splash_iv"
+            app:layout_constraintEnd_toStartOf="@id/splash_name"/>
+        <TextView
+            android:id="@+id/splash_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/splash_diver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/splash_iv"
+            app:layout_constraintBottom_toBottomOf="@id/splash_iv"/>
+
+        <TextView
+            android:id="@+id/splash_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Copyright ownership belongs to KeLing Technology Limited, shall not be reproduced , copied, or used in other ways without permission."
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/splash_iv"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--开屏广告试图-->
+    <com.huawei.hms.ads.splash.SplashView
+        android:id="@+id/splash_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
